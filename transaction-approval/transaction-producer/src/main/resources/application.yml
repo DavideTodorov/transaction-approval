@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true
+      bindings:
+        transaction-out-0:
+          binder: kafka
+          destination: transactions-topic
+          content-type: application/x-protobuf

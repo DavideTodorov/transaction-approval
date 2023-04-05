@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          auto-create-topics: true
+      bindings:
+        inputTopic:
+          destination: transactions-topic
+          content-type: application/x-protobuf
+          consumer:
+            groupId: transaction-approval-svc
+        outputTopic:
+          destination: approved-transactions-topic
+          content-type: application/x-protobuf
