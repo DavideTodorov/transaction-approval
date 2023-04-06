@@ -9,11 +9,16 @@ spring:
           brokers: localhost:9092
           auto-create-topics: true
       bindings:
-        inputTopic:
+        transactionConsumer-in-0:
+          binder: kafka
           destination: transactions-topic
           content-type: application/x-protobuf
-          consumer:
-            groupId: transaction-approval-svc
-        outputTopic:
+        approvedTransactionProducer-out-0:
+          binder: kafka
           destination: approved-transactions-topic
           content-type: application/x-protobuf
+        invalidTransactionProducer-out-0:
+          binder: kafka
+          destination: approved-transactions-topic
+          content-type: application/x-protobuf
+

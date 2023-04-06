@@ -21,7 +21,7 @@ public class TransactionProducer {
         String id = UUID.randomUUID().toString();
         long amount = RandomUtils.nextLong(0, 1000000000);
         String accountId = UUID.randomUUID().toString();
-        int transactionDirectionIndex = RandomUtils.nextInt(0, 3);
+        int transactionDirectionIndex = RandomUtils.nextInt(0, 2);
         Request.TransactionDirection transactionDirection = Request.TransactionDirection.values()[transactionDirectionIndex];
 
         Request.TransactionApproval transactionApproval = Request.TransactionApproval

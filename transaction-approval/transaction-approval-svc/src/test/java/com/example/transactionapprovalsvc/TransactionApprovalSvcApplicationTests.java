@@ -1,10 +1,10 @@
-package com.training.transactionapproval;
+package com.example.transactionapprovalsvc;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TransactionApprovalApplicationTests {
+class TransactionApprovalSvcApplicationTests {
 
     @Test
     void contextLoads() {

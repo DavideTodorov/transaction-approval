@@ -9,7 +9,7 @@ spring:
           brokers: localhost:9092
           auto-create-topics: true
       bindings:
-        transaction-out-0:
+        transactionSupplier-out-0:
           binder: kafka
           destination: transactions-topic
           content-type: application/x-protobuf

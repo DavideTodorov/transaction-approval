@@ -10,7 +10,7 @@ message TransactionApproval {
 }
 
 enum TransactionDirection {
-  UNUSED_TD = 0;
-  DEBIT = 1;
-  CREDIT = 2;
+  DEBIT = 0;
+  CREDIT = 1;
 }
+
